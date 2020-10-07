@@ -15,7 +15,7 @@ protocol CurrencyManagerDelegate {
 
 struct CurrencyManager {
     var delegate : CurrencyManagerDelegate!
-    let url = URL(string: "http://data.fixer.io/api/latest?access_key=373c409a78077a681243049665a17af5")
+    let url = URL(string: "http://data.fixer.io/api/latest?access_key=")
     let session = URLSession.shared
            
     func getCurrency() {
