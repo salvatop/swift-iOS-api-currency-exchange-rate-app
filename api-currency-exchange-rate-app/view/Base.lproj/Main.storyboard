@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="currency_converter" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXCHANGE RATES FOR 1 EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7O-qu-6Ad">
+                                <rect key="frame" x="91" y="129" width="232" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Rate: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGK-xg-s2S" userLabel="Exchange Rate:">
+                                <rect key="frame" x="20" y="199" width="367" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNm-9Q-NVu">
+                                <rect key="frame" x="0.0" y="239" width="414" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcV-lR-mQi">
+                                <rect key="frame" x="20" y="59" width="374" height="32"/>
+                                <state key="normal" title="Switch Theme Style">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yaK-0w-94D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IcV-lR-mQi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3Jb-Te-yxz"/>
+                            <constraint firstItem="eGK-xg-s2S" firstAttribute="top" secondItem="K7O-qu-6Ad" secondAttribute="bottom" constant="49" id="ApB-4E-3QK"/>
+                            <constraint firstItem="eGK-xg-s2S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="199" id="GgV-bW-SmB"/>
+                            <constraint firstItem="PNm-9Q-NVu" firstAttribute="centerX" secondItem="K7O-qu-6Ad" secondAttribute="centerX" id="SpL-9P-tSc"/>
+                            <constraint firstItem="PNm-9Q-NVu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a1G-Vn-Hee"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IcV-lR-mQi" secondAttribute="trailing" id="aIU-in-Cli"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eGK-xg-s2S" secondAttribute="trailing" constant="27" id="blr-7a-sU5"/>
+                            <constraint firstItem="eGK-xg-s2S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hZi-lz-oD2"/>
+                            <constraint firstItem="IcV-lR-mQi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="oq1-wb-Aua"/>
+                            <constraint firstItem="PNm-9Q-NVu" firstAttribute="top" secondItem="eGK-xg-s2S" secondAttribute="bottom" constant="19" id="qia-yX-bmB"/>
+                            <constraint firstItem="PNm-9Q-NVu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="raJ-eM-csu"/>
+                            <constraint firstItem="K7O-qu-6Ad" firstAttribute="top" secondItem="IcV-lR-mQi" secondAttribute="bottom" constant="38" id="vRL-8N-e7c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="excRate" destination="eGK-xg-s2S" id="Ccg-l4-KQ5"/>
+                        <outlet property="picker" destination="PNm-9Q-NVu" id="T6N-7b-8J2"/>
+                        <outlet property="switchStyle" destination="IcV-lR-mQi" id="7Ly-mj-bvj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+</document>
